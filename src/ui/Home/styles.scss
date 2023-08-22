@@ -1,0 +1,112 @@
+.searchSection {
+  display: flex;
+  align-items: center;
+  height: 4.125rem;
+  // width: 100vw;
+  background-color: #c42521;
+  padding: 0px 8.5rem;
+
+  input {
+    width: 100%;
+    height: 2.375rem;
+    border-radius: 5.578px;
+    background: #fff url("../../assets/search.png") no-repeat 13px center;
+    border: none;
+    outline: none;
+    padding-left: 2.8rem;
+    color: #676767;
+    font-size: 0.875rem;
+    letter-spacing: 0.02575rem;
+  }
+}
+
+.mainSection {
+  padding: 0px 8.5rem;
+  background-color: #1a1a1a;
+  // width: 100vw;
+  .heading {
+    padding: 1.09rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .cardsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .movie {
+      margin: 0.75rem;
+      position: relative;
+
+      width: 270px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .overlay {
+        bottom: 0;
+        left: 0;
+        height: 3rem;
+        background: rgba($color: #000000, $alpha: 0.7);
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        p {
+          padding: 10px 0px 0px 14px;
+        }
+        .Title {
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing: 0.02944rem;
+        }
+        .year {
+          display: none;
+        }
+        .description {
+          display: none;
+        }
+
+        &:hover {
+          height: 60%;
+          cursor: pointer;
+          transition: 0.3s;
+          .year {
+            display: block;
+          }
+          .description {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin: auto;
+    width: 250px;
+    padding: 50px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    img {
+      cursor: pointer;
+    }
+    .pag_circle {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #c42521;
+      opacity: 0.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

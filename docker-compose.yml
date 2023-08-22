@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+  node: &node
+    container_name: rv-deliver-app-fullstack-node
+    image: node:current-alpine3.14
+    working_dir: "/opt/app"
+
+  app:
+    <<: *node
+    container_name: rv-deliver-app-fullstack-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - "${PWD}:/opt/app"
+    entrypoint: [ "yarn", "start" ]

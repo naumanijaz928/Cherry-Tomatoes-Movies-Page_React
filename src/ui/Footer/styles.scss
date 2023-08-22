@@ -1,0 +1,21 @@
+.footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 25px 0px;
+
+  .icons {
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    width: 271.718px;
+    height: 38.658px;
+    margin-top: 40px;
+    img {
+      cursor: pointer;
+    }
+  }
+  small {
+    display: block;
+    margin-top: 60px;
+  }
+}
