@@ -34,7 +34,7 @@ export function Home() {
           type="search"
           name="search"
           id="search"
-          placeholder="Title"
+          placeholder="Search movies by title"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
@@ -45,7 +45,7 @@ export function Home() {
             ?.filter((movie: Movie) => {
               return search.toLowerCase() === ""
                 ? movie
-                : movie.title?.toLowerCase().includes(search);
+                : movie.title?.toLowerCase().includes(search.toLowerCase());
             })
             ?.map((movie: Movie) => (
               <SingleMovieMovie movie={movie} />
